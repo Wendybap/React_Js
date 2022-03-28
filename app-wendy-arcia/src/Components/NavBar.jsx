@@ -8,7 +8,7 @@ import {
   FormControl,
   Button,
 } from "react-bootstrap";
-
+import CartWidget from "./CartWidget";
 export default function NavBar() {
   return (
     <>
@@ -36,7 +36,7 @@ export default function NavBar() {
               <Nav.Link href="#action5">Crea tu cuenta</Nav.Link>
               <Nav.Link href="#action6">Iniciar Sesión</Nav.Link>
               <Nav.Link href="#action6" disabled>
-                Carrito
+                <CartWidget />
               </Nav.Link>
             </Nav>
             <Form className="d-flex">
