@@ -1,9 +1,10 @@
 import React from "react";
+import ItemCount from "./ItemCount";
 
 export default function ItemListContainer() {
   return (
     <>
-      <h1>Hola Mundo!!!!</h1>
+      <ItemCount stock={5} />
     </>
   );
 }
