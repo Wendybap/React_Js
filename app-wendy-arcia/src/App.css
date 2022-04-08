@@ -11,6 +11,11 @@
   display: flex;
   margin: 4px 2px;
 }
+.styleProducto {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
 
 /* .App {
   text-align: center;

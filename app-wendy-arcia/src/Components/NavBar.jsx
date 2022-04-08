@@ -9,12 +9,13 @@ import {
   Button,
 } from "react-bootstrap";
 import CartWidget from "./CartWidget";
+
 export default function NavBar() {
   return (
     <>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">Ecommerce</Navbar.Brand>
+          <Navbar.Brand>Ecommer</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
