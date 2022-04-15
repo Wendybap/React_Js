@@ -1,13 +1,8 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
+import ItemCount from "../ItemCount";
 
-export default function ItemDetail({ productos }) {
-  let producto = [];
-
-  if (productos.length > 0) {
-    producto = productos.filter((p) => p.id === 1)[0];
-  }
-
+export default function ItemDetail({ producto }) {
   return (
     <>
       <section className="estiloDetalleProduc mt-5">
@@ -18,6 +13,7 @@ export default function ItemDetail({ productos }) {
           <Col>
             <h2>{producto.descripcion}</h2>
             <h3>{producto.precio}</h3>
+            <ItemCount stock={5} />
           </Col>
         </Row>
       </section>

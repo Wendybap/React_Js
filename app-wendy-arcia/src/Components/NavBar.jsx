@@ -9,13 +9,16 @@ import {
   Button,
 } from "react-bootstrap";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
     <>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container fluid>
-          <Navbar.Brand>Ecommer</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">
+            Ecommerce
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -23,15 +26,19 @@ export default function NavBar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
+              <Nav.Link as={Link} to="/">
+                Home
+              </Nav.Link>
               <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action2">Moda</NavDropdown.Item>
-                <NavDropdown.Item href="#action3">
-                  Belleza y cuidado personal
+                <NavDropdown.Item as={Link} to="/category/Zapatillas">
+                  Zapatillas
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/category/Carteras">
+                  Carteras
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action4">
-                  Decoraciones
+                <NavDropdown.Item as={Link} to="/category/Remeras">
+                  Remeras
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#action5">Crea tu cuenta</Nav.Link>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 export default function ItemCount({ stock }) {
@@ -30,9 +31,11 @@ export default function ItemCount({ stock }) {
       <Button className="btn" onClick={adding} variant="warning">
         +
       </Button>
-      <Button onClick={onAdd} variant="primary" size="lg">
-        Comprar
-      </Button>
+      <Col>
+        <Button onClick={onAdd} variant="primary" size="lg">
+          Comprar
+        </Button>
+      </Col>
     </>
   );
 }

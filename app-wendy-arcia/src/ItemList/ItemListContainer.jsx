@@ -1,22 +1,40 @@
 import React, { useEffect, useState } from "react";
-import promesas from "../Utiles/promesas";
-import producto from "../Utiles/producto";
+// import promesas from "../Utiles/promesas";
+// import producto from "../Utiles/producto";
 import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
+import { productoCategorias } from "./../Utiles/promesas";
+import { Row } from "react-bootstrap";
 
 export default function ItemListContainer() {
   const [productos, setProductos] = useState([]);
+  const [tiempoEsperaItem, setTiempoEsperaItem] = useState(true);
+
+  const { categoryId } = useParams();
+  // console.log(categoryId);
 
   useEffect(() => {
-    promesas(2000, producto)
+    setTiempoEsperaItem(true);
+    productoCategorias(categoryId)
       .then((resultados) => setProductos(resultados))
-      .catch((err) => console.log(err));
-  }, [productos]);
+      .catch((err) => console.log(err))
+      .finally(() => setTiempoEsperaItem(false));
+  }, [categoryId]);
 
   return (
     <>
-      <div className="styleProducto">
+      {/* Aquí coloco el Ternario */}
+      {tiempoEsperaItem ? (
+        <h3>Cargando...</h3>
+      ) : (
+        <Row className="styleProducto">
+          <ItemList productos={productos} />
+        </Row>
+      )}
+
+      {/* <div className="styleProducto">
         <ItemList productos={productos} />
-      </div>
+      </div> */}
     </>
   );
 }
