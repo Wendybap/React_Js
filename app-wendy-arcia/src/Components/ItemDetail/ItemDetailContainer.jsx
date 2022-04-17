@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import { productoDetail } from "../../Utiles/promesas";
-import producto from "../../Utiles/producto";
 import { useParams } from "react-router-dom";
 
 export default function ItemDetailContainer() {

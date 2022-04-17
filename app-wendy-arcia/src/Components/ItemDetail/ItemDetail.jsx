@@ -1,8 +1,15 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import { Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount";
 
 export default function ItemDetail({ producto }) {
+  // Creo un Estado para guardar el numero que itera que va a utilizar el contador dentro de la funcion onAdd que inicializa en 0
+  const [numero, setNumero] = useState(0);
+  function onAdd(contador) {
+    setNumero(contador);
+  }
+
   return (
     <>
       <section className="estiloDetalleProduc mt-5">
@@ -13,7 +20,16 @@ export default function ItemDetail({ producto }) {
           <Col>
             <h2>{producto.descripcion}</h2>
             <h3>{producto.precio}</h3>
-            <ItemCount stock={5} />
+            {numero === 0 ? (
+              <ItemCount stock={5} onAdd={onAdd} />
+            ) : (
+              <Button>
+                <Link to="/cart" className="btn">
+                  {" "}
+                  Ir al Carrito
+                </Link>
+              </Button>
+            )}
           </Col>
         </Row>
       </section>

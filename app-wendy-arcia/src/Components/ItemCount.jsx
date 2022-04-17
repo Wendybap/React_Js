@@ -2,24 +2,20 @@ import React, { useState } from "react";
 import { Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
-export default function ItemCount({ stock }) {
-  // Estoy creando el estado
-  const [contador, setcontador] = useState(0);
+export default function ItemCount({ stock, onAdd }) {
+  // Estoy creando el estado para el contador
+  const [contador, setContador] = useState(0);
 
   function adding() {
     if (contador < stock) {
-      setcontador(contador + 1);
+      setContador(contador + 1);
     }
   }
 
   function subs() {
     if (contador > 0) {
-      setcontador(contador - 1);
+      setContador(contador - 1);
     }
-  }
-
-  function onAdd() {
-    alert("Compraste " + contador + " productos");
   }
 
   return (
@@ -32,7 +28,7 @@ export default function ItemCount({ stock }) {
         +
       </Button>
       <Col>
-        <Button onClick={onAdd} variant="primary" size="lg">
+        <Button onClick={() => onAdd(contador)} variant="primary" size="lg">
           Comprar
         </Button>
       </Col>
