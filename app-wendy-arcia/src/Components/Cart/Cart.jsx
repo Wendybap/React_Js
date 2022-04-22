@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { CartContext } from "./CartContext";
 
 export default function Cart() {
-  const { removeItem } = useContext(CartContext);
+  const { removeItem, clear } = useContext(CartContext);
   return (
     <>
       <Button className="btn"> Ir al Carrito </Button>
@@ -15,6 +15,15 @@ export default function Cart() {
       >
         {" "}
         Borrar{" "}
+      </Button>
+      <Button
+        className="btn"
+        onClick={() => {
+          clear();
+        }}
+      >
+        {" "}
+        Vaciar Carrito{" "}
       </Button>
     </>
   );

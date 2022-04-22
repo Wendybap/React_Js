@@ -42,6 +42,7 @@ export default function CartContextProvider({ children }) {
   // Aquí setea como vacio
   const clear = () => {
     setCart([]);
+    console.log(cart);
   };
 
   return (
