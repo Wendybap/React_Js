@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 // import producto from "../Utiles/producto";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
-import { productoCategorias } from "./../Utiles/promesas";
+import { productoCategorias } from "../Utiles/promesas";
 import { Row } from "react-bootstrap";
 
 export default function ItemListContainer() {

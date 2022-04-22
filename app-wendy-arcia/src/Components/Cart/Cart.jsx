@@ -1,5 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Button } from "react-bootstrap";
+import { CartContext } from "./CartContext";
 
-export const Cart = () => {
-  return <div>Componente Cart</div>;
-};
+export default function Cart() {
+  const { removeItem } = useContext(CartContext);
+  return (
+    <>
+      <Button className="btn"> Ir al Carrito </Button>
+      <Button
+        className="btn"
+        onClick={() => {
+          removeItem(1);
+        }}
+      >
+        {" "}
+        Borrar{" "}
+      </Button>
+    </>
+  );
+}

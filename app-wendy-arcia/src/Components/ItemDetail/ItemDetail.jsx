@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount";
 
 export default function ItemDetail({ producto }) {
-  // Creo un Estado para guardar el numero que itera que va a utilizar el contador dentro de la funcion onAdd que inicializa en 0
+  // Creo un Estado para guardar el numero que itera
+  // que va a utilizar el contador dentro de la funcion onAdd que inicializa en 0
   const [numero, setNumero] = useState(0);
   function onAdd(contador) {
     setNumero(contador);
@@ -21,11 +22,10 @@ export default function ItemDetail({ producto }) {
             <h2>{producto.descripcion}</h2>
             <h3>{producto.precio}</h3>
             {numero === 0 ? (
-              <ItemCount stock={5} onAdd={onAdd} />
+              <ItemCount producto={producto} stock={5} onAdd={onAdd} />
             ) : (
               <Button>
                 <Link to="/cart" className="btn">
-                  {" "}
                   Ir al Carrito
                 </Link>
               </Button>

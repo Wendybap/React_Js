@@ -1,21 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+import { CartContext } from "./Cart/CartContext";
 
-export default function ItemCount({ stock, onAdd }) {
+export default function ItemCount({ stock, onAdd, producto }) {
+  const { addItem } = useContext(CartContext);
   // Estoy creando el estado para el contador
   const [contador, setContador] = useState(0);
+  const [activar, setActivar] = useState(true);
 
   function adding() {
+    if (contador >= 0) {
+      setActivar(false);
+    }
     if (contador < stock) {
       setContador(contador + 1);
     }
   }
 
   function subs() {
+    if (contador === 1) {
+      setActivar(true);
+    }
     if (contador > 0) {
       setContador(contador - 1);
     }
+  }
+
+  function handleClick() {
+    addItem(producto, contador);
+    onAdd(contador);
   }
 
   return (
@@ -28,8 +42,13 @@ export default function ItemCount({ stock, onAdd }) {
         +
       </Button>
       <Col>
-        <Button onClick={() => onAdd(contador)} variant="primary" size="lg">
-          Comprar
+        <Button
+          onClick={handleClick}
+          variant="primary"
+          size="lg"
+          disabled={activar}
+        >
+          Agregar al carrito
         </Button>
       </Col>
     </>
