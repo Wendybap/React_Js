@@ -43,8 +43,8 @@ export default function NavBar() {
               </NavDropdown>
               <Nav.Link href="#action5">Crea tu cuenta</Nav.Link>
               <Nav.Link href="#action6">Iniciar Sesión</Nav.Link>
-              <Nav.Link href="#action6">
-                <CartWidget cant={0} />
+              <Nav.Link as={Link} to="/cart">
+                <CartWidget />
               </Nav.Link>
             </Nav>
             <Form className="d-flex">

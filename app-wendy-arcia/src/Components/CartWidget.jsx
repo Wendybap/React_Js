@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { CartContext } from "./Cart/CartContext";
 
-export default function CartWidget({ cant }) {
+export default function CartWidget() {
+  const { cart } = useContext(CartContext);
+
   return (
     <>
-      <FontAwesomeIcon icon={solid("cart-arrow-down")} /> {cant}
+      {cart.length > 0 && (
+        <div>
+          <FontAwesomeIcon icon={solid("cart-arrow-down")} />
+          {cart.length}
+        </div>
+      )}
     </>
   );
 }

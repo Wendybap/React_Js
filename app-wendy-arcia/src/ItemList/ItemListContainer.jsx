@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import promesas from "../Utiles/promesas";
-// import producto from "../Utiles/producto";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { productoCategorias } from "../Utiles/promesas";
@@ -31,10 +29,6 @@ export default function ItemListContainer() {
           <ItemList productos={productos} />
         </Row>
       )}
-
-      {/* <div className="styleProducto">
-        <ItemList productos={productos} />
-      </div> */}
     </>
   );
 }
