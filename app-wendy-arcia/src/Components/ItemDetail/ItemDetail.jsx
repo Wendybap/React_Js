@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 export default function ItemDetail({ producto }) {
+  const db = getFirestore();
+  const [productos, setProductos] = useState([]);
   // Creo un Estado para guardar el numero que itera
   // que va a utilizar el contador dentro de la funcion onAdd que inicializa en 0
   const [numero, setNumero] = useState(0);
@@ -26,7 +29,7 @@ export default function ItemDetail({ producto }) {
             ) : (
               <Button>
                 <Link to="/cart" className="btn">
-                  Ir al Carrito
+                  Terminar compra
                 </Link>
               </Button>
             )}

@@ -70,7 +70,7 @@ export default function Cart() {
               </tr>
             </tfoot>
           </Table>
-          <Button className="btn"> Terminar compra </Button>
+          <Button className="btn"> Comprar </Button>
           <Button
             className="btn"
             onClick={() => {
@@ -84,12 +84,12 @@ export default function Cart() {
         <div>
           <Modal.Dialog>
             <Modal.Body>
-              <p>No hay productos agregados en esta sección</p>
+              <p>Tu carrito está vacío</p>
             </Modal.Body>
 
             <Modal.Footer>
               <Button>
-                <Link to="/Item/:id" className="btn">
+                <Link to="/" className="btn">
                   Volver al inicio
                 </Link>
               </Button>

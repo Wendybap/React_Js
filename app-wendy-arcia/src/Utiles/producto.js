@@ -72,7 +72,7 @@ const productos = [
 
     stock: 11,
     imagen:
-      "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/014/432/products/picsart_08-23-06-45-311-3cc0448ba47121bf6515982219391721-1024-1024.jpg",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_820466-MLA47280495592_082021-F.webp",
     descripcion: "Indumentaria de mujer, cartera deportivas",
   },
   {
@@ -82,7 +82,8 @@ const productos = [
     categoria: "Carteras",
 
     stock: 23,
-    imagen: "https://m.media-amazon.com/images/I/71b0U5psn9L._AC_UY395_.jpg",
+    imagen:
+      "https://http2.mlstatic.com/D_NQ_NP_637929-MLA49126541255_022022-O.webp",
     descripcion: "Indumentaria de mujer, cartera deportivas",
   },
   {

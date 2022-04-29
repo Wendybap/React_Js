@@ -8,12 +8,9 @@ export default function CartWidget() {
 
   return (
     <>
-      {cart.length > 0 && (
-        <div>
-          <FontAwesomeIcon icon={solid("cart-arrow-down")} />
-          {cart.length}
-        </div>
-      )}
+      <FontAwesomeIcon icon={solid("cart-arrow-down")} />{" "}
+      {cart.length === 0 ? " " : cart.length}
     </>
   );
 }
+// {cart.length > 0 && <div>{cart.length}</div>}

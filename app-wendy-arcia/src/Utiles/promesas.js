@@ -1,26 +1,28 @@
 import producto from "./producto";
-
-let respuestaPositiva = true;
-export default function promesas(tiempo, tarea) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (respuestaPositiva) {
-        resolve(tarea);
-      } else {
-        reject("err");
-      }
-    }, tiempo);
-  });
-}
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 export const productoCategorias = (categoryId) => {
-  return new Promise((resolve, reject) => {
-    const productosFiltradosCategorias = producto.filter(
-      (producto) => producto.categoria === categoryId
+  const db = getFirestore();
+  const productosRef = collection(db, "productos");
+  const categoriaRef = collection(db, "categoria");
+
+  let categoria = {};
+  getDocs(categoriaRef).then((respuesta) => {
+    let categorias = [...respuesta.docs];
+    localStorage.setItem(
+      "categoria",
+      categorias.find((cat) => cat.nombre === categoryId)
     );
-    setTimeout(() => {
-      categoryId ? resolve(productosFiltradosCategorias) : resolve(producto);
-    }, 2000);
+  });
+  console.log(localStorage.getItem("categoria"));
+
+  return getDocs(productosRef).then((respuesta) => {
+    let productos = [...respuesta.docs];
+    productos = productos.map((item) => ({ id: item.id, ...item.data() }));
+    return productos;
+    // const productosFiltradosCategorias = productos.filter(
+    //   (producto) => producto.categoria === categoryId
+    // );
   });
 };
 
