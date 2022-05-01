@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 
 // Aquí estoy Creando el Contexto "Variable Global"
 export const CartContext = createContext();
@@ -42,9 +42,6 @@ export default function CartContextProvider({ children }) {
     setCart((prevState) => prevState.filter((cart, index) => index !== id));
   };
   // setCart(cart.filter((item) => item.producto.id !== id));
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
 
   // Aquí setea como vacio
   const clear = () => {

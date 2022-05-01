@@ -16,7 +16,7 @@ export default function App() {
           <Route exact path="/" element={<ItemListContainer />} />
           <Route
             exact
-            path="/category/:categoryId"
+            path="/category/:categoriaId"
             element={<ItemListContainer />}
           />
           <Route exact path="/Item/:id" element={<ItemDetailContainer />} />

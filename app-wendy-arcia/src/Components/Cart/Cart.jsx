@@ -13,9 +13,7 @@ export default function Cart() {
 
   function sumatoria() {
     let total = 0;
-    cart.map((item) => {
-      total += item.producto.precio * item.cantidad;
-    });
+    cart.map((item) => (total += item.producto.precio * item.cantidad));
     return total;
   }
 

@@ -8,8 +8,10 @@ export default function CartWidget() {
 
   return (
     <>
-      <FontAwesomeIcon icon={solid("cart-arrow-down")} />{" "}
-      {cart.length === 0 ? " " : cart.length}
+      <FontAwesomeIcon icon={solid("cart-arrow-down")} />
+      {cart.length === 0
+        ? " "
+        : cart.reduce((prev, next) => prev + next.cantidad, 0)}
     </>
   );
 }
