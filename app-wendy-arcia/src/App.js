@@ -6,6 +6,7 @@ import ItemDetailContainer from "./Components/ItemDetail/ItemDetailContainer";
 import CartContextProvider from "./Components/Cart/CartContext";
 import Cart from "./Components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import OrdenDeCompra from "./Components/OrdenDeCompra/OrdenDeCompra";
 
 export default function App() {
   return (
@@ -21,6 +22,11 @@ export default function App() {
           />
           <Route exact path="/Item/:id" element={<ItemDetailContainer />} />
           <Route exact path="/cart" element={<Cart />}></Route>
+          <Route
+            exact
+            path="/ordenDeCompra"
+            element={<OrdenDeCompra />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </CartContextProvider>

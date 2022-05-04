@@ -51,10 +51,18 @@ export default function CartContextProvider({ children }) {
   //   console.log(cart);
   // }, [cart]);
 
+  const sumatoria = () => {
+    let total = 0;
+    cart.map((item) => (total += item.producto.precio * item.cantidad));
+    return total;
+  };
+
   return (
     <>
       {/* value me permite colocar lo que quiero que reciban los children en este caso es el estado (cart), y las funciones que coloque dentro del provider */}
-      <CartContext.Provider value={{ cart, addItem, removeItem, clear }}>
+      <CartContext.Provider
+        value={{ cart, addItem, removeItem, clear, sumatoria }}
+      >
         {children}
       </CartContext.Provider>
     </>

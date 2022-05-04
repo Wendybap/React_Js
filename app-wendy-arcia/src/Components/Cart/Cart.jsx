@@ -1,21 +1,12 @@
 import React, { useContext } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { CartContext } from "./CartContext";
+import { total } from "../../Utiles/funciones";
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function Cart() {
-  const { removeItem, clear, cart } = useContext(CartContext);
-
-  function total(precio, cantidad) {
-    return precio * cantidad;
-  }
-
-  function sumatoria() {
-    let total = 0;
-    cart.map((item) => (total += item.producto.precio * item.cantidad));
-    return total;
-  }
+  const { removeItem, clear, cart, sumatoria } = useContext(CartContext);
 
   function llenarCarrito() {
     return cart.map((item, index) => (
@@ -68,7 +59,11 @@ export default function Cart() {
               </tr>
             </tfoot>
           </Table>
-          <Button className="btn"> Comprar </Button>
+          <Button>
+            <Link to="/ordenDeCompra" className="btn">
+              Comprar
+            </Link>
+          </Button>
           <Button
             className="btn"
             onClick={() => {
