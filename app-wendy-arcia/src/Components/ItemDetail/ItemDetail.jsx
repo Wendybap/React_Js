@@ -20,9 +20,14 @@ export default function ItemDetail({ producto }) {
           </Col>
           <Col>
             <h2>{producto.descripcion}</h2>
-            <h3>{producto.precio}</h3>
+            <h3>${producto.precio}</h3>
+            <h4>Cantidad disponible {producto.stock}</h4>
             {numero === 0 ? (
-              <ItemCount producto={producto} stock={5} onAdd={onAdd} />
+              <ItemCount
+                producto={producto}
+                stock={producto.stock}
+                onAdd={onAdd}
+              />
             ) : (
               <Button>
                 <Link to="/cart" className="btn">

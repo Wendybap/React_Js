@@ -1,5 +1,3 @@
-// import producto from "./producto";
-
 import {
   collection,
   getDocs,
@@ -28,6 +26,7 @@ export const total = (precio, cantidad) => {
   return precio * cantidad;
 };
 
+// Funcion para agregar info a la database
 export const ventas = (item) => {
   const db = getFirestore();
   const ordenDeVentas = collection(db, "ventas");

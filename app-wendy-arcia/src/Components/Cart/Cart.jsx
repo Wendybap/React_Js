@@ -4,6 +4,8 @@ import { CartContext } from "./CartContext";
 import { total } from "../../Utiles/funciones";
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 export default function Cart() {
   const { removeItem, clear, cart, sumatoria } = useContext(CartContext);
@@ -20,16 +22,15 @@ export default function Cart() {
         </th>
         <th>{item.producto.descripcion}</th>
         <th>{item.cantidad}</th>
-        <th>{item.producto.precio}</th>
-        <th>{total(item.producto.precio, item.cantidad)}</th>
+        <th>$ {item.producto.precio}</th>
+        <th>$ {total(item.producto.precio, item.cantidad)}</th>
         <th>
           <Button
-            className="btn"
             onClick={() => {
               removeItem(index);
             }}
           >
-            Borrar
+            <FontAwesomeIcon icon={solid("trash")} />
           </Button>
         </th>
       </tr>
@@ -55,7 +56,7 @@ export default function Cart() {
             <tfoot>
               <tr>
                 <th colSpan="4">Total</th>
-                <th>{sumatoria()}</th>
+                <th>$ {sumatoria()}</th>
               </tr>
             </tfoot>
           </Table>
