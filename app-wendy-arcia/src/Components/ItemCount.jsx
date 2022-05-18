@@ -44,8 +44,7 @@ export default function ItemCount({ stock, onAdd, producto }) {
       <Col>
         <Button
           onClick={handleClick}
-          variant="primary"
-          size="lg"
+          className="btn btn-primary mt-3"
           disabled={activar}
         >
           Agregar al carrito

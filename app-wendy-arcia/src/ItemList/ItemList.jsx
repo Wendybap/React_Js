@@ -4,12 +4,13 @@ import { Col } from "react-bootstrap";
 
 export default function ItemList({ productos }) {
   return productos.map((producto) => (
-    <Col>
+    <Col className="mb-4">
       <Item
         key={producto.id}
         id={producto.id}
         nombre={producto.nombre}
         precio={producto.precio}
+        leyenda={producto.leyenda}
         categoria={producto.categoria}
         imagen={producto.imagen}
       />
