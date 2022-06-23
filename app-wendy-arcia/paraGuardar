@@ -1,0 +1,115 @@
+/* :root {
+  --colorDeFondo: #ededed;
+  --colorNegro: #000000;
+  --colorBlanco: #ffffff;
+
+  --texto1: rgba(0, 0, 0, 0.8);
+  --texto2: rgba(0, 0, 0, 0.45);
+  --texto3: #666;
+
+  --verde: #00a650;
+  --azulLetras: #2968c8;
+  --azulFondoBotones: #3483fa
+  --amarillo: #fff159;
+
+  --fontFamily: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
+    Roboto, Arial, sans-serif;
+}
+
+*.App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--texto1);
+   font-weight: inherit;
+}
+html{
+  min-height: 100%;
+  background-color: var(--colorDeFondo);
+}
+
+.button, input{
+border: 0;
+background-color: none;
+font-family: var(--fontFamily); 
+
+} */
+
+DESCRIPCION PRODUCTO
+ <Descripcion>
+        <h2>
+          
+          {tituloDescricion}
+          {/* <span>Descripción</span> */}
+        </h2>
+        {/* parrafo1 */}
+        {/* <p>SOMOS HEY GO! REMERAS DE ALGODÓN PEINADO 24/1 ESTAMPADAS EN DTG</p> */}
+        <p>
+          {/* parrafo2 */}
+          {/* Estampamos en DTG -Impresión directa sobre la prenda- lo que brinda la */}
+          {/* {/* mejor calidad de impresión actual del mercado. Colores full HD, podés */}
+
+          {/* imprimir lo que se te ocurra!!! */}
+        </p>
+        {/* parrafo3 */}
+        {/* <p>Te estarás llevando un producto de máxima calidad.</p> */}
+        <p>
+          {/* parrafo4 */}
+          {/* NO ES SUBLIMACIÓN - NO ES TRANSFER - NO ES SERIGRAFÍA. Es un método */}
+          {/* muy superior de inyección de tinta en la prenda. Tamaño máximo de */}
+          {/* estampa 29x46cm. */}
+        </p>
+        <p>
+          {/* parrafo5 */}
+          {/* El precio corresponde para un sólo lado (frente o dorso) Para */}
+          {/* estampado de ambos, frente y dorso, entrar a esta publicación: */}
+          {/* https://articulo.mercadolibre.com.ar/MLA-924386771-remera-personalizada-100-algodon-estampado-dtg-frentedorso-_JM */}
+        </p>
+        {/* cracteristicas */}
+        {/* <p>CARACTERISTICAS:</p> */}
+        <p>
+          {/* caracteristica1 */}
+          {/* Tela: Algodón Jersey 24/1 y 30/1 Peinado. <br /> */}
+          {/* caracteristica2 */}
+          /* { Cuello: Ribb redondo. <br /> }
+          { caracteristica3 }
+          { {/Detalles: Tapacostura a tono -Tirillera de hombro a hombro. <br /> }
+          { }
+          { caracteristica4 }
+          { Terminaciones: costura en hilo de algodón reforzado a tono. <br /> }
+          { caracteristica5 }
+          { Colores: Blanco/Negro/Gris Melange/Azul Marino/Azul }
+          { marino/Celeste/Rojo/Verde Musgo/Verde Lima/Verde }
+          { Benetton/Bordo/borgoña (uva oscuro), Sweet Lila, Rosa chicle, Coral, }
+          { Rosa, Limon. CONFIRMAR COLORES ANTES DE COMPRAR. }
+          <br />
+          <br />
+          { caracteristica6/}
+          { Tenemos Stock de Corte UNISEX, DAMA y NIÑOS. El corte de Dama es más }
+          { entallado en la cintura y mangas más cortas. }
+        </p>
+        { medidas }
+        { <p>--M-E-D-I-D-A-S--</p> }
+        <p>
+          { hombre }
+          { <p>HOMBRE:</p> }
+          <br />
+           {hombre:S}
+          { S: ANCHO SISA 49 CM // LARGO 67 CM <br /> }
+          { hombreM}
+          { M: ANCHO SISA 52 CM // LARGO 71 CM <br /> }
+          { hombreL */}
+          { L: ANCHO SISA 55 CM // LARGO 73 CM <br /> }
+          { hombreXL */}
+          { XL: ANCHO SISA 57 CM // LARGO 75 CM <br /> }
+          { hombreXXL */}
+          { XXL: ANCHO SISA 60 CM // LARGO 77 CM <br /> } 
+        </p>
+      </Descripcion> */
