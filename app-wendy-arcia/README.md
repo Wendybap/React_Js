@@ -4,7 +4,7 @@ Proyecto final del Curso de React Js de CODERHOUSE!!!!
 
 ![image](videoReadme.gif)
 
-![image](videoReact.gif)
+![image](VideoReact.gif)
 
 ## Framework y librerías utilizadas en este proyecto:
 
