@@ -4,8 +4,6 @@ Proyecto final del Curso de React Js de CODERHOUSE!!!!
 
 ![image](videoReadme.gif)
 
-![image](VideoAppReact.gif)
-
 ## Framework y librerías utilizadas en este proyecto:
 
 ## 1.- react-bootstrap en su versión "^2.2.2"
@@ -43,3 +41,5 @@ Este proyecto utilizó Firebase para la base de datos y para hacer el deployment
 para mostrar alertas y diálogos de confirmación con un diseño bonito.
 
 ![image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxZ-MBVJns3N0SlucfJB1CoaJtxxgBCY0etFqPLKEPDaM-QAKcPoJ2Y1gvK4lpz6mBno8&usqp=CAU)
+
+![image](VideoReactApp.gif)
