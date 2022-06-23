@@ -46,7 +46,7 @@ DESCRIPCION PRODUCTO
  <Descripcion>
         <h2>
           
-          {tituloDescricion}
+          {tituloDescripcion}
           {/* <span>Descripción</span> */}
         </h2>
         {/* parrafo1 */}
@@ -113,3 +113,4 @@ DESCRIPCION PRODUCTO
           { XXL: ANCHO SISA 60 CM // LARGO 77 CM <br /> } 
         </p>
       </Descripcion> */
+      Solo en CABA y zonas de GBA Comprando dentro de las próximas 2 h 20 min Beneficio Mercado Puntos
