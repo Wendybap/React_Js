@@ -1,11 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
-    Roboto, Arial, sans-serif;
+    Roboto, Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
-    Roboto, Arial, sans-serif;
+    Roboto, Arial, sans-serif !important;
 }

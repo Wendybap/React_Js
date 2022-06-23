@@ -1,8 +1,9 @@
 import React from "react";
-import NavBar from "./Components/NavBar";
+import NavBar from "./Components/NavBar/NavBar.jsx";
 import ItemListContainer from "./ItemList/ItemListContainer";
 import "./App.css";
-import ItemDetailContainer from "./Components/ItemDetail/ItemDetailContainer";
+// import GlobalStyles from "./styles/GlobalStyles";
+import ItemDetailContainer from "./Components/ItemDetail/ItemDetailContainer/ItemDetailContainer";
 import CartContextProvider from "./Components/Cart/CartContext";
 import Cart from "./Components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
 import Spinner from "react-bootstrap/Spinner";
 import { obtenerProductos } from "../Utiles/funciones";
+import { ItemListBanner } from "./ItemListBanner";
 
 export default function ItemListContainer() {
   const [productos, setProductos] = useState([]);
@@ -31,11 +32,14 @@ export default function ItemListContainer() {
           <Spinner animation="border" variant="warning" />
         </div>
       ) : (
-        <Container className="mt-4 d-flex justify-content-center aling-items-center h-100">
-          <Row>
-            <ItemList productos={productos} />
-          </Row>
-        </Container>
+        <>
+          {categoriaId === undefined && <ItemListBanner />}
+          <Container className="mt-4 d-flex justify-content-center aling-items-center h-100">
+            <Row>
+              <ItemList productos={productos} />
+            </Row>
+          </Container>
+        </>
       )}
     </>
   );

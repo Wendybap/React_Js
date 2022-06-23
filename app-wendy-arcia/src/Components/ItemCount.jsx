@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { CartContext } from "./Cart/CartContext";
+import { BotonCard } from "./ItemCountStyle";
 
 export default function ItemCount({ stock, onAdd, producto }) {
   const { addItem } = useContext(CartContext);
@@ -41,14 +42,11 @@ export default function ItemCount({ stock, onAdd, producto }) {
       <Button className="btn" onClick={adding} variant="warning">
         +
       </Button>
+
       <Col>
-        <Button
-          onClick={handleClick}
-          className="btn btn-primary mt-3"
-          disabled={activar}
-        >
+        <BotonCard onClick={handleClick} className="boton" disabled={activar}>
           Agregar al carrito
-        </Button>
+        </BotonCard>
       </Col>
     </>
   );

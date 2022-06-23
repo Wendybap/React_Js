@@ -3,7 +3,6 @@ import React, { createContext, useState } from "react";
 // Aquí estoy Creando el Contexto "Variable Global"
 export const CartContext = createContext();
 
-// Creo al Componente Proveedor de data o info a los hijos (lo que van a consumir los hijos)
 export default function CartContextProvider({ children }) {
   // Creo el estado
   const [cart, setCart] = useState([]);
@@ -20,8 +19,6 @@ export default function CartContextProvider({ children }) {
       if (cantidadTotal <= item.stock) {
         newCart[cartIndex].cantidad = cantidadTotal;
         setCart(newCart);
-      } else {
-        //Aqui va un mensaje cuando la cantidad total sea mayor al stock
       }
     } else {
       let producto = {
@@ -31,25 +28,15 @@ export default function CartContextProvider({ children }) {
       setCart([...cart, producto]);
     }
   };
-  // Este useEfect lo uso para evitar la asincronia de React y que cuando seleccione
-  // el producto por primera vez no me aparezca vacio
-  // es una forma de debuggear, es decir, encontrat y eliminar errores
-  // useEffect(() => {
-  //   console.log(cart);
-  // }, [cart]);
 
   const removeItem = (id) => {
     setCart((prevState) => prevState.filter((cart, index) => index !== id));
   };
-  // setCart(cart.filter((item) => item.producto.id !== id));
 
   // Aquí setea como vacio
   const clear = () => {
     setCart([]);
   };
-  // useEffect(() => {
-  //   console.log(cart);
-  // }, [cart]);
 
   const sumatoria = () => {
     let total = 0;
@@ -59,7 +46,6 @@ export default function CartContextProvider({ children }) {
 
   return (
     <>
-      {/* value me permite colocar lo que quiero que reciban los children en este caso es el estado (cart), y las funciones que coloque dentro del provider */}
       <CartContext.Provider
         value={{ cart, addItem, removeItem, clear, sumatoria }}
       >
